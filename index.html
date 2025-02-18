@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านขายรองเท้า</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- เพิ่มส่วนนี้ก่อนปิดแท็ก body -->
+<div class="order-overlay" id="orderOverlay">
+    <div class="order-container">
+        <span class="close-btn" onclick="closeOrderForm()">&times;</span>
+        <h2>แบบฟอร์มสั่งซื้อ</h2>
+        <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+            <input type="text" id="productName" readonly>
+            <input type="text" id="productPrice" readonly>
+            <input type="text" placeholder="ชื่อ-นามสกุล" required>
+            <input type="tel" placeholder="เบอร์โทรศัพท์" required>
+            <textarea placeholder="ที่อยู่จัดส่ง" required></textarea>
+            <select required>
+                <option value="" disabled selected>เลือกจำนวน</option>
+                <option value="1">1 คู่</option>
+                <option value="2">2 คู่</option>
+                <option value="3">3 คู่</option>
+            </select>
+            <button type="submit">ยืนยันการสั่งซื้อ</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<body>
+
+<header>
+    <h1>ร้านขายรองเท้าออนไลน์</h1>
+    <p>รองเท้าคุณภาพสูงสำหรับทุกการใช้งาน</p>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="#products">สินค้า</a>
+    <a href="#about">เกี่ยวกับเรา</a>
+    <a href="#contact">ติดต่อเรา</a>
+</nav>
+
+<div class="container" id="products">
+    <div class="product">
+        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco/b2609971-6e69-4687-8f22-f69daeb79c0d/G.T.+CUT+3+EP.png" alt="Nike G.T. Cut 3 EP">
+        <h3>Nike G.T. Cut 3 EP</h3>
+        <p>รองเท้ากีฬาบาสเกตบอล จาก Nike</p>
+        <p class="price">6,900 บาท</p>
+        <p>รหัสสินค้า 25566</p>
+        <a href="order.html">
+        <button>สั่งซื้อ</button>
+    </a>
+    </div>
+
+    <div class="product">
+        <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1e43d02945224ccb989b1bf92cca5a50_9366/D.O.N._Issue_6_IH3572_01_00_standard.jpg" alt="D.O.N. ISSUE 6">
+        <h3>D.O.N. ISSUE 6</h3>
+        <p>รองเท้ากีฬาบาสเกตบอล จาก Adidas</p>
+        <p class="price">4,300 บาท</p>
+        <p>รหัสสินค้า 35566</p>
+        <a href="order2.html">
+        <button>สั่งซื้อ</button>
+    </a>
+    </div>
+
+    <div class="product">
+        <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/310776/01/sv01/fnd/PNA/fmt/png/PUMA-x-LAMELO-BALL-MB.04-Scooby-Doo-Men's-Basketball-Shoes" alt="PUMA x LAMELO BALL MB.04 Scooby-Doo">
+        <h3>PUMA x LAMELO BALL MB.04 Scooby-Doo</h3>
+        <p>รองเท้ากีฬาบาสเกตบอล จาก Puma</p>
+        <p class="price">5,600 บาท</p>
+        <p>รหัสสินค้า 45566</p>
+        <a href="order3.html">
+        <button>สั่งซื้อ</button>
+        </a>
+    </div>
+
+    <div class="product">
+        <img src="https://www.basketballemotion.com/imagesarticulos/238406/750/zapatillas-converse-all-star-bb-trilliant-cx-fever-dream-dial-up-blue-0.webp" alt="CONVERSE ALL STAR BB TRILLIANT CX BASKETBALL SHOES">
+        <h3>CONVERSE ALL STAR BB TRILLIANT CX</h3>
+        <p>รองเท้ากีฬาบาสเกตบอล จาก Converse</p>
+        <p class="price">6,500 บาท</p>
+        <p>รหัสสินค้า 55566</p>
+        <a href="order4.html">
+        <button>สั่งซื้อ</button>
+    </a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 ร้านขายรองเท้า. สงวนลิขสิทธิ์.</p>
+</footer>
+
+</body>
+</html>

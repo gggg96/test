@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สั่งซื้อสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมต่อไฟล์ CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .product-detail img {
+            max-width: 150px;
+            max-height: 150px;
+            object-fit: cover;
+        }
+        .product-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .product-info h2 {
+            margin: 0;
+            color: #333;
+        }
+        .product-info p {
+            color: #777;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ร้านขายรองเท้าออนไลน์</h1>
+        <p>รองเท้าคุณภาพสูงสำหรับทุกการใช้งาน</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="#products">สินค้า</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#contact">ติดต่อเรา</a>
+    </nav>
+    
+    <div class="container">
+        <h1>สั่งซื้อสินค้า</h1>
+
+        <!-- รายละเอียดสินค้า -->
+        <div class="product-detail">
+            <img src="product_image.jpg" alt="รายละเอียดสินค้า">
+            <div class="product-info">
+                <h2>ชื่อสินค้า: รองเท้าบาสเกตบอล</h2>
+                <p>สี: Scooby-Doo</p>
+                <p>ราคา: ฿5,300</p>
+            </div>
+        </div>
+
+        <!-- ฟอร์มสั่งซื้อ -->
+        <form action="https://api.example.com/orders" method="POST">
+            <div class="form-group">
+                <label for="product_id">รหัสสินค้า:</label>
+                <input type="text" id="product_id" name="product_id" value="" placeholder="กรอกรหัสสินค้า" required>
+            </div>
+
+            <div class="form-group">
+                <label for="size">ขนาดรองเท้า:</label>
+                <select id="size" name="size" required>
+                    <option value="">เลือกขนาด</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">จำนวน:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+
+            <!-- ปุ่มสำหรับกรอกรหัสสินค้า -->
+            <button type="button" id="generate_code_button" onclick="generateProductId()">เขียนรหัสสินค้า</button>
+
+            <button type="submit">สั่งซื้อ</button>
+        </form>
+    </div>
+
+    <script>
+        function generateProductId() {
+            // กำหนดรหัสสินค้า
+            const productId = "12345"; // รหัสสินค้าเฉพาะที่ต้องการ
+            document.getElementById("product_id").value = productId; // ใส่รหัสสินค้าลงในช่อง
+        }
+    </script>
+</body>
+</html>
